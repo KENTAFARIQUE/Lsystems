@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wdth,wght@1,77.2,900&display=swap');
+
+
+* {
+    color: black;
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.header{
+    padding-right: 1000px;
+    box-shadow: 5px 5px 10px #bebebe,
+    -5px -5px 10px #ffffff;
+}
+
+.container {
+    background-color: #e0e0e0;
+    width: 100vw;
+    height: 100vh;
+}
+
+form {
+    font-size: 30px;
+}
+
+
+.input-block > label, .input-block > input {
+    width: 80%
+}
+
+input {
+    outline: none;
+    border: 0px solid;
+    border-radius: 2px;
+    background: #e0e0e0;
+    box-shadow: 5px 5px 10px #bebebe,
+    -5px -5px 10px #ffffff;
+    transition: box-shadow 0.5s ease;
+}
+
+input:focus {
+    box-shadow: none;
+
+}
+
+
+button {
+    border: 0px solid;
+    border-radius: 2px;
+    background: #e0e0e0;
+    box-shadow: 5px 5px 10px #bebebe,
+    -5px -5px 10px #ffffff;
+    transition: box-shadow 0.5s ease;
+}
+
+button:active {
+    box-shadow: none
+}

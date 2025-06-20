@@ -1,0 +1,36 @@
+{% load static %}
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wdth,wght@1,77.2,900&display=swap" rel="stylesheet">
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <div class="filler"></div>
+        <div class="form-container">
+            <form method="POST">
+                <div class="input-block">
+                    <label for="login">Login</label>
+                    <input id="login" type="text" name="login">
+                </div>
+                <div class="input-block">
+                    <label for="password">Password</label>
+                    <input id="password" type="password" name="password">
+                </div>
+                <div class="input-block">
+                    <label for="password">Re-Type password:</label>
+                    <input id="password" type="password" name="password2">
+                </div>
+                {% csrf_token %}
+                <button>Sign up</button>
+            </form>
+        </div>
+        <div class="filler"></div>
+    </div>
+</body>
+</html>

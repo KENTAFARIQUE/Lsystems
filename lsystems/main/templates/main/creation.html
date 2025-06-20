@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+{% block content %}
+<form method="post">
+    <div class="container" style="display: grid; grid-template-columns: 30vw 50vw;">
+        <div class="image-container">
+            <img src="data:image/png;base64,{{ img_str }}" alt="okokokok" style="max-width:90%; height:auto; border:0px solid #ccc;"/>
+        </div>
+        <div class="form-container">
+            {% csrf_token %}
+            <button type="submit" name="action" value="render">Cгенерировать</button>
+            <button type="submit" name="action" value="save">Cохранить</button>
+            {{ form.as_p }}
+        </div>
+    </div>
+</form>
+{% endblock %}

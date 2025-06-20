@@ -1,0 +1,21 @@
+{% extends 'main/base.html' %}
+{% block content %}
+<h2>Галерея</h2>
+<div class="gallery-grid" style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px;">
+  {% for img in images %}
+      <div class="container" style="box-shadow: inset 5px 5px 10px #bebebe,
+            inset -5px -5px 10px #ffffff; border-radius: 5px;">
+        <img src="data:image/png;base64,{{ img }}" alt="a"
+           style="width: 100%; cursor: pointer; border: 0px solid #ccc; border-radius: 5px;"
+           data-bs-toggle="modal" data-bs-target="#imageModal{{ img.pk }}">
+      <div class="container">
+        <form method="POST" action="{% url 'delete_image' img.pk %}">
+    {% csrf_token %}
+    <button type="submit">Удалить</button>
+</form>
+        <a>{{ img }}</a>
+      </div>
+      </div>
+  {% endfor %}
+</div>
+{% endblock %}

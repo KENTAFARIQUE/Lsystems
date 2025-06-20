@@ -1,0 +1,12 @@
+{% extends 'main/base.html' %}
+{% block content %}
+<h2>Галерея</h2>
+<div class="gallery-grid" style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px;">
+  {% for img in images %}
+    <img src="data:image/png;base64,{{ img }}" alt="a"
+           style="width: 100%; cursor: pointer; border: 0px solid #ccc; box-shadow: 5px 5px 10px #bebebe,
+            -5px -5px 10px #ffffff; border-radius: 4px;"
+           >
+  {% endfor %}
+</div>
+{% endblock %}
